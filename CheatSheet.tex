@@ -1,0 +1,195 @@
+%%% Submitted to SocialCom 2013
+\documentclass[report,twocolumn]{IEEEtran}
+%
+%
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xspace}
+\usepackage{subfig}
+\usepackage{amsmath} 
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{subfig}
+\usepackage{subfloat}
+%\usepackage{colortbl}
+%\usepackage{lscape}
+
+\definecolor{Red}{rgb}{0.7,0.0,0.0}
+\definecolor{Green}{rgb}{0.0,0.7,0.0}
+\definecolor{Blue}{rgb}{0.0,0.0,0.7}
+
+\newcommand{\red}[1]{{\color{Red}{#1}}}
+\newcommand{\blue}[1]{{\color{Blue}{#1}}}
+\newcommand{\green}[1]{{\color{Green}{#1}}}
+
+\long\def\remark#1#2{%
+  \medskip\noindent\fbox{\parbox{.97\columnwidth}{\textbf{#1:} #2}}\medskip}
+
+\long\def\RMremark#1{\remark{Ronaldo}{\red{#1}}}
+\long\def\MTremark#1{\remark{Marcello}{\red{#1}}}
+
+\long\def\secret#1{\fbox{\textsl{Anonymized}}}
+
+\newcommand{\et}{{et al.}\xspace}
+%\renewcommand{\baselinestretch}{2}
+
+\begin{document}
+
+\title{Terminal Cheat Sheet}
+
+%\author{
+%\authorblockN{Marcello Tomasini\authorrefmark{1}} 
+
+%\vspace{.2cm}
+%\authorblockA{\authorrefmark{1}BioComplex Laboratory, Computer Science\\
+%Florida Institute of Technology, Melbourne, USA\\
+%Email: mtomasini@my.fit.edu}}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bash}
+\begin{center}
+\begin{tabular}{ l | l }
+\hline
+Action & Sequence\\
+\hline
+beginning of line & \texttt{C-a} \\
+end of line & \texttt{C-e} \\
+forward one word & \texttt{M-f} \\
+backward one word & \texttt{M-b} \\
+\hline
+delete word & \texttt{C-w} \\
+clear screen & \texttt{C-l} \\
+clear line before& \texttt{C-u} \\
+clear line after & \texttt{C-k} \\
+swap last two words & \texttt{M-t} \\
+yank & \texttt{C-y} \\
+undo & \texttt{C-\_} \\
+\hline
+search history & \texttt{C-r} \\
+kill & \texttt{C-c} \\
+suspend process & \texttt{C-Z} \\
+restore process & \texttt{fg} \\
+exit & \texttt{C-d} \\
+\hline
+\end{tabular}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tmux}
+\begin{center}
+\begin{tabular}{ l | l }
+\hline
+Action & Sequence\\
+\hline
+new named session & \texttt{tmux new -s <name>} \\
+attach & \texttt{tmux a \#} \\
+attach to named & \texttt{tmux a -t <name>} \\
+list sessions & \texttt{tmux ls} \\
+kill session & \texttt{tmux kill-session -t <name>} \\
+\hline
+new session & \texttt{C-b :new} \\
+rename session & \texttt{C-b \$} \\
+list sessions & \texttt{C-b s} \\
+\hline
+new window & \texttt{C-b c} \\
+rename window & \texttt{C-b ,} \\
+list windows & \texttt{C-b w} \\
+find window & \texttt{C-b f} \\
+kill window & \texttt{C-b \&} \\
+\hline
+vertical split & \texttt{C-b \%} \\
+horizontal split & \texttt{C-b "} \\
+switch pane & \texttt{C-b o} \\
+show pane numbers & \texttt{C-b q} \\
+goto pane & \texttt{C-b q <pane number>} \\
+move pane to left & \texttt{C-b \{} \\
+move pane to right & \texttt{C-b \}} \\
+kill pane & \texttt{C-b x} \\
+\hline
+detach & \texttt{C-b d} \\
+prompt & \texttt{C-b :} \\
+list shortcuts & \texttt{C-b ?} \\
+\hline
+\end{tabular}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Finder}
+\begin{center}
+\begin{tabular}{ l | l }
+\hline
+Action & Sequence\\
+\hline
+quicklook & \texttt{qlmanage -p <filename>} \\
+open a directory & \texttt{open <directory path>} \\
+next Terminal Tab & \texttt{Cmd-\}} \\
+previous  Terminal Tab & \texttt{Cmd-\{} \\
+\hline
+\end{tabular}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vim}
+\begin{center}
+\begin{tabular}{ l | l }
+\hline
+Action & Sequence\\
+\hline
+next word & \texttt{w} \\
+previous word & \texttt{b} \\
+back to indentation & \texttt{\^} \\
+start of line & \texttt{0} \\
+end of line & \texttt{\$} \\
+cursor to top line & \texttt{H} \\
+cursor to middle line & \texttt{M} \\
+cursor to bottom line & \texttt{L} \\
+goto line & \texttt{:<line number>} \\
+half page down & \texttt{C-d} \\
+half page up & \texttt{C-u} \\
+next page & \texttt{C-f} \\
+previous page & \texttt{C-b} \\
+\hline
+start line selection & \texttt{V} \\
+start range selection & \texttt{v} \\
+start column selection & \texttt{C-v} \\
+clear selection & \texttt{esc} \\
+copy selection & \texttt{y} \\
+\hline
+delete word before cursor & \texttt{i C-w} \\
+delete till end of line & \texttt{D} \\
+delete lines & \texttt{<number>dd} \\
+copy lines & \texttt{:<number>yy} \\
+paste buffer & \texttt{p} \\
+undo & \texttt{u} \\
+show named registers & \texttt{:reg} \\
+paste register & \texttt{"<number>p} \\
+\hline
+indent line forward & \texttt{i C-t} \\
+indent line backward & \texttt{i C-d} \\
+reformat text/code & \texttt{V =} \\
+reformat line & \texttt{==} \\
+reformat paragraph & \texttt{gq} \\
+fold code block & \texttt{V :fold} \\
+open folded block & \texttt{zo} \\
+close folded block & \texttt{zc} \\
+replace text & \texttt{:\%s/<match>/<replace>/} \\
+\hline
+search forward & \texttt{/<match>} \\
+search backward & \texttt{?<match>} \\
+search word under cursor & \texttt{*} \\
+shw lines mtch wrd undr crsr & \texttt{[I} \\
+next match forward & \texttt{n} \\
+next match backward & \texttt{N} \\
+\hline
+\end{tabular}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
