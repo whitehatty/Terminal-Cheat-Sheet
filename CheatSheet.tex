@@ -85,44 +85,78 @@ exit & \texttt{C-d} \\
 \end{tabular}
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Tmux}
+%\section{Tmux}
+%\begin{center}
+%\begin{tabular}{ l | l }
+%\hline
+%Action & Sequence\\
+%\hline
+%new named session & \texttt{tmux new -s <name>} \\
+%attach & \texttt{tmux a \#} \\
+%attach to named & \texttt{tmux a -t <name>} \\
+%list sessions & \texttt{tmux ls} \\
+%kill session & \texttt{tmux kill-session -t <name>} \\
+%\hline
+%new session & \texttt{C-b :new} \\
+%rename session & \texttt{C-b \$} \\
+%list sessions & \texttt{C-b s} \\
+%\hline
+%new window & \texttt{C-b c} \\
+%rename window & \texttt{C-b ,} \\
+%list windows & \texttt{C-b w} \\
+%find window & \texttt{C-b f} \\
+%kill window & \texttt{C-b \&} \\
+%\hline
+%vertical split & \texttt{C-b \%} \\
+%horizontal split & \texttt{C-b "} \\
+%switch pane & \texttt{C-b o} \\
+%show pane numbers & \texttt{C-b q} \\
+%goto pane & \texttt{C-b q <pane number>} \\
+%move pane to left & \texttt{C-b \{} \\
+%move pane to right & \texttt{C-b \}} \\
+%kill pane & \texttt{C-b x} \\
+%\hline
+%detach & \texttt{C-b d} \\
+%prompt & \texttt{C-b :} \\
+%list shortcuts & \texttt{C-b ?} \\
+%\hline
+%\end{tabular}
+%\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{GNU Screen}
 \begin{center}
 \begin{tabular}{ l | l }
 \hline
 Action & Sequence\\
 \hline
-new named session & \texttt{tmux new -s <name>} \\
-attach & \texttt{tmux a \#} \\
-attach to named & \texttt{tmux a -t <name>} \\
-list sessions & \texttt{tmux ls} \\
-kill session & \texttt{tmux kill-session -t <name>} \\
+Help & \texttt{C-a ?}\\
 \hline
-new session & \texttt{C-b :new} \\
-rename session & \texttt{C-b \$} \\
-list sessions & \texttt{C-b s} \\
+create a new window & \texttt{C-a c}\\
+create named window & \texttt{screen -t <name>}\\
+attach session \texttt{<name>} & \texttt{screen -r <name>}\\
+suspend screen & \texttt{C-a C-z}\\
+detach screen & \texttt{C-a d}\\
+list of detached screen & \texttt{screen -D -R} \\
+list windows & \texttt{C-a w}\\
+list sessions & \texttt{screen -ls}\\
 \hline
-new window & \texttt{C-b c} \\
-rename window & \texttt{C-b ,} \\
-list windows & \texttt{C-b w} \\
-find window & \texttt{C-b f} \\
-kill window & \texttt{C-b \&} \\
-\hline
-vertical split & \texttt{C-b \%} \\
-horizontal split & \texttt{C-b "} \\
-switch pane & \texttt{C-b o} \\
-show pane numbers & \texttt{C-b q} \\
-goto pane & \texttt{C-b q <pane number>} \\
-move pane to left & \texttt{C-b \{} \\
-move pane to right & \texttt{C-b \}} \\
-kill pane & \texttt{C-b x} \\
-\hline
-detach & \texttt{C-b d} \\
-prompt & \texttt{C-b :} \\
-list shortcuts & \texttt{C-b ?} \\
+enter command line mode & \texttt{C-a}\\ 
+enter copy/scrollback mode & \texttt{C-a <Esc>}\\
+change window's title & \texttt{C-a A}\\
+switch to window \texttt{<num>} & \texttt{C-a \texttt{<num>}}\\
+switch between windows & \texttt{C-a C-a}\\
+go to next window & \texttt{C-a n}\\
+go to previous window & \texttt{C-a p}\\
+split current region & \texttt{C-a S}\\
+switch focus to the next region & \texttt{C-a <Tab>}\\
+delete all regions but current & \texttt{C-a Q}\\
+do nothing & \texttt{C-a @}\\
 \hline
 \end{tabular}
 \end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Finder}
 \begin{center}
 \begin{tabular}{ l | l }
